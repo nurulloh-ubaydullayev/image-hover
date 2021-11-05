@@ -28,6 +28,11 @@ body {
   box-shadow: -2px 6px 60px 39px rgba(150, 148, 148, 0.123);
 }
 
+.container .imgBox:hover {
+  transform: scale(1.1);
+  transition: 0.9s;
+}
+
 .container .imgBox img {
   position: absolute;
   top: 0;
