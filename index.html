@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image hover effect</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="imgBox">
+        <img
+          src="./Images/wp5609839.png"
+          alt="Image"
+          width="300"
+          height="300"
+        />
+        <img src="./Images/500x500.jpg" alt="Image" width="300" height="300" />
+      </div>
+
+      <div class="imgBox">
+        <img
+          src="./Images/hls-starship.jpg"
+          alt="Image"
+          width="300"
+          height="300"
+        />
+        <img
+          src="./Images/ramazan-kazaliev-by-ramazan-kazaliev-space-journey-skafand-1.jpg"
+          alt="Image"
+          width="300"
+          height="300"
+        />
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+      integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./hover.js"></script>
+    <script>
+      Array.from(document.querySelectorAll(".imgBox")).forEach((e) => {
+        const imgs = Array.from(e.querySelectorAll("img"));
+
+        new hoverEffect({
+          parent: e,
+          intensity: 0.3,
+          image1: imgs[0].getAttribute("src"),
+          image2: imgs[1].getAttribute("src"),
+          displacementImage: "Images/7.jpg",
+        });
+      });
+    </script>
+  </body>
+</html>
